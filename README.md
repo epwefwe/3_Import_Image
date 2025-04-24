@@ -3,6 +3,7 @@
 # 2. Storing to LMDB
 # 3. Storing to HDF5
 📁 1. Menyimpan ke Disk (File .png dan .csv)
+
 📌 Cara kerja:
 Gambar disimpan sebagai file .png di folder menggunakan Pillow (Image.save).
 
@@ -23,6 +24,7 @@ Metadata terpisah → sulit sinkronisasi kalau tidak hati-hati.
 Lambat untuk pemrosesan batch → harus load file satu per satu dari disk.
 
 📦 2. Menyimpan ke LMDB (Lightning Memory-Mapped Database)
+
 📌 Cara kerja:
 Gambar dikonversi menjadi byte (.tobytes()), lalu dibungkus ke dalam class CIFAR_Image bersama label.
 
@@ -45,6 +47,7 @@ Tidak bisa overwrite data lama → hanya bisa append, kecuali database dibuat ul
 Lebih kompleks dibanding menyimpan ke disk.
 
 🧬 3. Menyimpan ke HDF5 (Hierarchical Data Format 5)
+
 📌 Cara kerja:
 Gambar dan label disimpan dalam satu file .h5 dengan dua dataset (image, label).
 

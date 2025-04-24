@@ -1,7 +1,6 @@
 # Three Ways of Storing and Accessing Lots of Images in Python
 # 1. Storing to Disk (as individual image files)
-# 2. Storing to LMDB
-# 3. Storing to HDF5
+
 📁 1. Menyimpan ke Disk (File .png dan .csv)
 
 📌 Cara kerja:
@@ -21,7 +20,10 @@ Label (metadata) disimpan terpisah dalam file .csv.
 
 - Metadata terpisah → sulit sinkronisasi kalau tidak hati-hati.
 
-- Lambat untuk pemrosesan batch → harus load file satu per satu dari disk.
+- Lambat untuk pemrosesan batch → harus load file satu per satu dari disk.'
+
+  
+# 2. Storing to LMDB
 
 📦 2. Menyimpan ke LMDB (Lightning Memory-Mapped Database)
 
@@ -45,6 +47,9 @@ Label (metadata) disimpan terpisah dalam file .csv.
 - Tidak bisa overwrite data lama → hanya bisa append, kecuali database dibuat ulang.
 
 - Lebih kompleks dibanding menyimpan ke disk.
+
+  
+# 3. Storing to HDF5
 
 🧬 3. Menyimpan ke HDF5 (Hierarchical Data Format 5)
 
